@@ -2,8 +2,6 @@
 
 ## Installation
 
-## Installation
-
 ```sh
 conda env create --file environment.yml --name vbm
 conda activate vbm

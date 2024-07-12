@@ -1,4 +1,4 @@
-name: sti
+name: vbm
 channels:
   - anaconda
   - conda-forge
@@ -181,4 +181,4 @@ dependencies:
     - xarray==2023.7.0
     - xarray-einstats==0.6.0
     - zipp==3.16.2
-prefix: /home/ziaee/anaconda3/envs/sti
+prefix: /home/ziaee/anaconda3/envs/vbm

@@ -1,4 +1,4 @@
-# Simulation-based Inference on Virtual Brain Models of Disorders
+# Simulation-based Inference on Virtual Brain Models of Disorders (SBI-VBMs)
 
 ## Installation
 

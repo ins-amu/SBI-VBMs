@@ -1,4 +1,4 @@
-# Bayesian inference The virtual brain models Simulation-based-inference Structural connectivity Stimulation
+# Simulation-based Inference on Virtual Brain Models of Disorders
 
 ## Installation
 

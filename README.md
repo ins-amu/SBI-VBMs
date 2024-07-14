@@ -9,6 +9,10 @@ cd SBI-VBMs
 pip install -r requirements.txt
 pip install -e .
 
+sudo apt install swig
+cd src/model
+make
+
 # gpu support
 # conda install -c conda-forge cupy cudatoolkit=11.3
 # conda install -c conda-forge pytorch-gpu

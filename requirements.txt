@@ -5,3 +5,5 @@ matplotlib
 sbi 
 torch
 ipykernel
+nbconvert
+jpype1

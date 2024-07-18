@@ -1,0 +1,115 @@
+{
+    "fc_corr": [
+        0,
+        41
+    ],
+    "fcd_corr": [
+        41,
+        82
+    ],
+    "fc_sum": [
+        82,
+        83
+    ],
+    "fcd_sum": [
+        83,
+        84
+    ],
+    "fluidity": [
+        84,
+        85
+    ],
+    "moments": [
+        85,
+        525
+    ],
+    "higher_moments": [
+        525,
+        1317
+    ],
+    "envelope": [
+        1317,
+        1669
+    ],
+    "fcd_edge_var": [
+        1669,
+        1670
+    ],
+    "fc_homotopic": [
+        1670,
+        1714
+    ],
+    "fcd_filt_limbic": [
+        1714,
+        1716
+    ],
+    "fcd_filt_frontal": [
+        1716,
+        1718
+    ],
+    "fcd_filt_occipital": [
+        1718,
+        1720
+    ],
+    "fcd_filt_temporal": [
+        1720,
+        1722
+    ],
+    "fcd_filt_parietal": [
+        1722,
+        1724
+    ],
+    "fcd_filt_centralstructures": [
+        1724,
+        1726
+    ],
+    "fcd_corr_0": [
+        1726,
+        1767
+    ],
+    "fcd_corr_1": [
+        1767,
+        1808
+    ],
+    "fcd_corr_2": [
+        1808,
+        1849
+    ],
+    "fcd_corr_3": [
+        1849,
+        1890
+    ],
+    "fcd_corr_4": [
+        1890,
+        1931
+    ],
+    "fcd_corr_5": [
+        1931,
+        1972
+    ],
+    "fc_corr_0": [
+        1972,
+        2013
+    ],
+    "fc_corr_1": [
+        2013,
+        2054
+    ],
+    "fc_corr_2": [
+        2054,
+        2095
+    ],
+    "fc_corr_3": [
+        2095,
+        2136
+    ],
+    "fc_corr_4": [
+        2136,
+        2177
+    ],
+    "fc_corr_5": [
+        2177,
+        2218
+    ],
+    "num_features": 2218
+}

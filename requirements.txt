@@ -1,9 +1,0 @@
-scipy
-numpy
-pandas
-matplotlib
-sbi 
-torch
-ipykernel
-nbconvert
-jpype1

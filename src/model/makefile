@@ -3,9 +3,10 @@ CXX=g++
 CXXFLAGS  = -std=c++11 -fopenmp -O2  -fPIC -c
 SWIGFLAGS = -c++ -python -shadow  
 
-# location of the Python header files
-PYTHON_VERSION = 3.8
-PYTHON_INCLUDE = /usr/include/python$(PYTHON_VERSION)
+# Automatically detect Python configuration
+PYTHON_CONFIG := $(shell which python3-config || which python-config)
+PYTHON_INCLUDE := $(shell $(PYTHON_CONFIG) --includes 2>/dev/null || python3 -c "from sysconfig import get_paths; print('-I' + get_paths()['include'])")
+PYTHON_LDFLAGS := $(shell $(PYTHON_CONFIG) --ldflags 2>/dev/null || echo "")
 
 
 all: _mpr_damaged.so 
@@ -18,7 +19,7 @@ _mpr_damaged.so: mpr_damaged_wrap.o
 	$(CXX) -shared -fopenmp mpr_damaged_wrap.o -o _mpr_damaged.so
 
 mpr_damaged_wrap.o : mpr_damaged_wrap.cpp mpr_damaged.hpp utility.hpp bold.hpp
-	$(CXX) $(CXXFLAGS) $< -I $(PYTHON_INCLUDE)
+	$(CXX) $(CXXFLAGS) $< $(PYTHON_INCLUDE)
 
 mpr_damaged_wrap.cpp : mpr_damaged.i 
 	swig $(SWIGFLAGS) -o mpr_damaged_wrap.cpp mpr_damaged.i

@@ -62,36 +62,47 @@ pip install -e ".[all]"
 After installation, you need to compile the C++ model extensions:
 
 ```sh
-sudo apt install swig  # Install SWIG if not already installed
+# Install SWIG (if not already installed)
+# Option 1: Using system package manager
+sudo apt install swig
+
+# Option 2: Using conda (recommended if using conda environment)
+conda install -c conda-forge swig
+
+# Build the extensions
 cd src/model
 make
 ```
+
+### Verify Installation
+
+After installation, verify that the package is correctly installed:
+
+```sh
+python -c "import src; print(f'Package version: {src.__version__}')"
+```
+
+This should print: `Package version: 0.2.0`
 
 ### Alternative: Conda Environment Installation
 
 If you prefer using conda for environment management:
 
 ```sh
-# Create conda environment with Python
-conda create -n vbm python=3.9
-conda activate vbm
+# Create conda environment with Python 3.9, 3.10, or 3.11
+conda create -n sbi-vbms python=3.11
+conda activate sbi-vbms
+
+# Install SWIG for building C++ extensions
+conda install -c conda-forge swig
 
 # Install the package
 pip install -e .
 
 # Build C++ extensions
-sudo apt install swig
 cd src/model
 make
-```
 
-### Legacy Installation
-
-The old `environment.yml` and `requirements.txt` files are still available for backward compatibility:
-
-```sh
-conda env create --file environment.yml --name vbm
-conda activate vbm
-pip install -r requirements.txt
-pip install -e .
+# Verify installation
+python -c "import src; print(f'Package version: {src.__version__}')"
 ```

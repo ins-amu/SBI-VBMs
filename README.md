@@ -34,59 +34,7 @@ This research has received funding from EU’s Horizon 2020 Framework Programme 
 
 ## Installation
 
-### Quick Install (Recommended)
-
-The easiest way to install the package with all dependencies:
-
-```sh
-pip install -e .
-```
-
-For development (includes testing and formatting tools):
-```sh
-pip install -e ".[dev]"
-```
-
-For documentation building:
-```sh
-pip install -e ".[docs]"
-```
-
-To install everything:
-```sh
-pip install -e ".[all]"
-```
-
-### Building C++ Extensions
-
-After installation, you need to compile the C++ model extensions:
-
-```sh
-# Install SWIG (if not already installed)
-# Option 1: Using system package manager
-sudo apt install swig
-
-# Option 2: Using conda (recommended if using conda environment)
-conda install -c conda-forge swig
-
-# Build the extensions
-cd src/model
-make
-```
-
-### Verify Installation
-
-After installation, verify that the package is correctly installed:
-
-```sh
-python -c "import src; print(f'Package version: {src.__version__}')"
-```
-
-This should print: `Package version: 0.2.0`
-
-### Alternative: Conda Environment Installation
-
-If you prefer using conda for environment management:
+### Standard Installation
 
 ```sh
 # Create conda environment with Python 3.9, 3.10, or 3.11
@@ -96,8 +44,31 @@ conda activate sbi-vbms
 # Install SWIG for building C++ extensions
 conda install -c conda-forge swig
 
-# Install the package
+# Install the package with all dependencies
 pip install -e .
+
+# Build C++ extensions
+cd src/model
+make
+
+# Verify installation
+python -c "import src; print(f'Package version: {src.__version__}')"
+```
+
+### Development Installation
+
+For development work (includes testing, formatting, and documentation tools):
+
+```sh
+# Create conda environment with Python 3.9, 3.10, or 3.11
+conda create -n sbi-vbms python=3.11
+conda activate sbi-vbms
+
+# Install SWIG for building C++ extensions
+conda install -c conda-forge swig
+
+# Install the package with all development dependencies
+pip install -e ".[all]"
 
 # Build C++ extensions
 cd src/model

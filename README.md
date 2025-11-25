@@ -12,28 +12,8 @@ conda activate sbi-vbms
 # Install SWIG for building C++ extensions
 conda install -c conda-forge swig
 
-# Install the package with all dependencies
+# Install the package with all dependencies (Recommended)
 pip install -e .
-
-# Build C++ extensions
-cd src/model
-make
-
-# Verify installation
-python -c "import src; print(f'Package version: {src.__version__}')"
-```
-
-### Development Installation
-
-For development work (includes testing, formatting, and documentation tools):
-
-```sh
-# Create conda environment with Python 3.9, 3.10, or 3.11
-conda create -n sbi-vbms python=3.11
-conda activate sbi-vbms
-
-# Install SWIG for building C++ extensions
-conda install -c conda-forge swig
 
 # Install the package with all development dependencies
 pip install -e ".[all]"
@@ -45,7 +25,6 @@ make
 # Verify installation
 python -c "import src; print(f'Package version: {src.__version__}')"
 ```
-
 
 ```
 @article{SBI-VBMs,

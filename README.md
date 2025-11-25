@@ -34,18 +34,64 @@ This research has received funding from EU’s Horizon 2020 Framework Programme 
 
 ## Installation
 
+### Quick Install (Recommended)
+
+The easiest way to install the package with all dependencies:
+
 ```sh
-conda env create --file environment.yml --name vbm
+pip install -e .
+```
+
+For development (includes testing and formatting tools):
+```sh
+pip install -e ".[dev]"
+```
+
+For documentation building:
+```sh
+pip install -e ".[docs]"
+```
+
+To install everything:
+```sh
+pip install -e ".[all]"
+```
+
+### Building C++ Extensions
+
+After installation, you need to compile the C++ model extensions:
+
+```sh
+sudo apt install swig  # Install SWIG if not already installed
+cd src/model
+make
+```
+
+### Alternative: Conda Environment Installation
+
+If you prefer using conda for environment management:
+
+```sh
+# Create conda environment with Python
+conda create -n vbm python=3.9
 conda activate vbm
-cd SBI-VBMs
-pip install -r requirements.txt
+
+# Install the package
 pip install -e .
 
+# Build C++ extensions
 sudo apt install swig
 cd src/model
 make
+```
 
-# gpu support
-# conda install -c conda-forge cupy cudatoolkit=11.3
-# conda install -c conda-forge pytorch-gpu
+### Legacy Installation
+
+The old `environment.yml` and `requirements.txt` files are still available for backward compatibility:
+
+```sh
+conda env create --file environment.yml --name vbm
+conda activate vbm
+pip install -r requirements.txt
+pip install -e .
 ```
